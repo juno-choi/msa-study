@@ -10,3 +10,6 @@ Microservice Architecture에 대한 학습내용
 
 ### Eurek Discovery
 https://velog.io/@ililil9482/Spring-Cloud-Netflix-Eureka-i8j2lbny
+
+### Microservice 등록
+https://velog.io/@ililil9482/Spring-Cloud-Microservice

@@ -1,0 +1,13 @@
+server:
+  port: 9001
+
+spring:
+  application:
+    name: user-service
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true  #Eureka 서버로부터 인스턴스들의 정보를 주기적으로 가져올지 설정
+    service-url:
+      defaultZone: http://127.0.0.1:8761/eureka #Eureka 서버 위치값 http://ip:포트/자원
