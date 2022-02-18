@@ -17,7 +17,7 @@ spring:
           uri: http://127.0.0.1:8001/ #gateway로 연결될 서비스 uri
           predicates: #gateway로 연결될 서비스의 url 매핑
             - Path=/first-service/**
-        - id: seconde-service
-          uri: http://127.0.0.1:8001/
+        - id: second-service
+          uri: http://127.0.0.1:8002/
           predicates:
             - Path=/second-service/**
