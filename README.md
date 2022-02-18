@@ -16,3 +16,10 @@ https://velog.io/@ililil9482/Spring-Cloud-Microservice
 
 ### Microservice 랜덤 포트 적용
 https://velog.io/@ililil9482/Microservice-%EB%9E%9C%EB%8D%A4-%ED%8F%AC%ED%8A%B8%EB%A1%9C-%EC%8B%A4%ED%96%89%ED%95%98%EA%B8%B0
+
+---
+
+## study2
+
+### Spring Cloud Gateway 생성
+https://velog.io/@ililil9482/Spring-Cloud-Gateway-%EC%84%A4%EC%A0%95
