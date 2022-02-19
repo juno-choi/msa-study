@@ -5,9 +5,9 @@ import org.springframework.cloud.gateway.route.builder.RouteLocatorBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-@Configuration  //해당 어노테이션을 통해 spring이 시작될때 context에 자동으로 등록되도록 한다.
+//@Configuration  //해당 어노테이션을 통해 spring이 시작될때 context에 자동으로 등록되도록 한다.
 public class FilterConfig {
-    @Bean
+    //@Bean
     public RouteLocator gatewayRoutes(RouteLocatorBuilder builder){
         return builder.routes()
                 .route(r-> r.path("/first-service/**")

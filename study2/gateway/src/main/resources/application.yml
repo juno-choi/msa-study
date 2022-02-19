@@ -8,16 +8,22 @@ eureka: #eureka 세팅은 현재 사용 안함
     service-url:
       defaultZone: http://127.0.0.1:8761/eureka
 
-#spring:
-#  application:  #gateway service 이름름    name: apigateway-service
-#  cloud:
-#    gateway:  #gateway 설정
-#      routes:
-#        - id: first-service #gateway로 연결될 서비스 이름
-#          uri: http://127.0.0.1:8001/ #gateway로 연결될 서비스 uri
-#          predicates: #gateway로 연결될 서비스의 url 매핑
-#            - Path=/first-service/**
-#        - id: second-service
-#          uri: http://127.0.0.1:8002/
-#          predicates:
-#            - Path=/second-service/**
+spring:
+  application:  #gateway service 이름름    name: apigateway-service
+  cloud:
+    gateway:  #gateway 설정
+      routes:
+        - id: first-service #gateway로 연결될 서비스 이름
+          uri: http://127.0.0.1:8001/ #gateway로 연결될 서비스 uri
+          predicates: #gateway로 연결될 서비스의 url 매핑
+            - Path=/first-service/**
+          filters:
+            - AddRequestHeader=first-request, first-request-header2
+            - AddResponseHeader=first-response, first-response-header2
+        - id: second-service
+          uri: http://127.0.0.1:8002/
+          predicates:
+            - Path=/second-service/**
+          filters:
+            - AddRequestHeader=second-request, second-request-header2
+            - AddResponseHeader=second-response, second-response-header2
