@@ -23,3 +23,7 @@ https://velog.io/@ililil9482/Microservice-%EB%9E%9C%EB%8D%A4-%ED%8F%AC%ED%8A%B8%
 
 ### Spring Cloud Gateway 생성
 https://velog.io/@ililil9482/Spring-Cloud-Gateway-%EC%84%A4%EC%A0%95
+
+### Gateway filter 설정 (java)
+https://velog.io/@ililil9482/Spring-Cloud-Gateway-FilterJava-%EC%84%A4%EC%A0%95
+
