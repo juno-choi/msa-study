@@ -27,3 +27,5 @@ https://velog.io/@ililil9482/Spring-Cloud-Gateway-%EC%84%A4%EC%A0%95
 ### Gateway filter 설정 (java)
 https://velog.io/@ililil9482/Spring-Cloud-Gateway-FilterJava-%EC%84%A4%EC%A0%95
 
+### Gateway CustomFilter 적용
+https://velog.io/@ililil9482/Spring-Cloud-Gateway-CustomFilter
