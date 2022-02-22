@@ -12,6 +12,12 @@ spring:
   application:  #gateway service 이름름    name: apigateway-service
   cloud:
     gateway:  #gateway 설정
+      default-filters:
+        - name : GlobalFilter #Global Filter로 지정된 java 파일 이름
+          args:
+            baseMessage: Spring Cloud Gateway Global Filter
+            preLogger: true
+            postLogger: true
       routes:
         - id: first-service #gateway로 연결될 서비스 이름
           uri: http://127.0.0.1:8001/ #gateway로 연결될 서비스 uri
