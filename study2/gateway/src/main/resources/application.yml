@@ -3,13 +3,14 @@ server:
 
 eureka: #eureka 세팅은 현재 사용 안함
   client:
-    fetch-registry: false
-    register-with-eureka: false
+    fetch-registry: true
+    register-with-eureka: true
     service-url:
       defaultZone: http://127.0.0.1:8761/eureka
 
 spring:
-  application:  #gateway service 이름름    name: apigateway-service
+  application:  #gateway service 이름
+    name: apigateway-service
   cloud:
     gateway:  #gateway 설정
       default-filters:
@@ -20,7 +21,7 @@ spring:
             postLogger: true
       routes:
         - id: first-service #gateway로 연결될 서비스 이름
-          uri: http://127.0.0.1:8001/ #gateway로 연결될 서비스 uri
+          uri: lb://FIRST-SERVICE #gateway로 연결될 서비스 uri
           predicates: #gateway로 연결될 서비스의 url 매핑
             - Path=/first-service/**
           filters:
@@ -28,7 +29,7 @@ spring:
 #            - AddResponseHeader=first-response, first-response-header2
             - CustomFilter
         - id: second-service
-          uri: http://127.0.0.1:8002/
+          uri: lb://SECOND-SERVICE
           predicates:
             - Path=/second-service/**
           filters:

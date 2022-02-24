@@ -35,3 +35,6 @@ https://velog.io/@ililil9482/Spring-Cloud-Gateway-GlobalFilter
 
 ### Gateway 여러 Filter 적용 및 우선순위 설정
 https://velog.io/@ililil9482/Spring-Cloud-Gateway-LoggingFilter
+
+### Load Balancer 설정
+https://velog.io/@ililil9482/Gateway-Load-Balancer
