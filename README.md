@@ -38,3 +38,10 @@ https://velog.io/@ililil9482/Spring-Cloud-Gateway-LoggingFilter
 
 ### Load Balancer 설정
 https://velog.io/@ililil9482/Gateway-Load-Balancer
+
+---
+
+## study3
+
+### MSA User Service 만들기 [1] 프로젝트 생성 및 h2 연동
+https://velog.io/@ililil9482/MSA-User-Service-%EB%A7%8C%EB%93%A4%EA%B8%B0-1-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%83%9D%EC%84%B1-%EB%B0%8F-h2-%EC%97%B0%EB%8F%99
