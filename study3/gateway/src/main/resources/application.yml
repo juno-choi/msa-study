@@ -24,11 +24,11 @@ spring:
           uri: lb://USER-SERVICE
           predicates:
             - Path=/user-service/**
-          filters:
-            - CustomFilter
         - id: catalog-service
           uri: lb://CATALOG-SERVICE
           predicates:
             - Path=/catalog-service/**
-          filters:
-            - CustomFilter
+        - id: order-service
+          uri: lb://ORDER-SERVICE
+          predicates:
+            - Path=/order-service/**
