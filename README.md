@@ -6,7 +6,7 @@ Microservice Architecture에 대한 학습내용
 
 ---
 
-## study1
+## 📗study1
 
 ### Eurek Discovery
 https://velog.io/@ililil9482/Spring-Cloud-Netflix-Eureka-i8j2lbny
@@ -19,7 +19,7 @@ https://velog.io/@ililil9482/Microservice-%EB%9E%9C%EB%8D%A4-%ED%8F%AC%ED%8A%B8%
 
 ---
 
-## study2
+## 📗study2
 
 ### Spring Cloud Gateway 생성
 https://velog.io/@ililil9482/Spring-Cloud-Gateway-%EC%84%A4%EC%A0%95
@@ -41,7 +41,7 @@ https://velog.io/@ililil9482/Gateway-Load-Balancer
 
 ---
 
-## study3
+## 📗study3
 
 ### MSA User Service 만들기 [1] 프로젝트 생성 및 h2 연동
 https://velog.io/@ililil9482/MSA-User-Service-%EB%A7%8C%EB%93%A4%EA%B8%B0-1-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%83%9D%EC%84%B1-%EB%B0%8F-h2-%EC%97%B0%EB%8F%99
@@ -51,3 +51,6 @@ https://velog.io/@ililil9482/UserService-%EB%A7%8C%EB%93%A4%EA%B8%B0
 
 ### Security 적용
 https://velog.io/@ililil9482/Security-%EC%A0%81%EC%9A%A9
+
+### User 조회
+https://velog.io/@ililil9482/User-%EC%A1%B0%ED%9A%8C
