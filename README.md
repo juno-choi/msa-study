@@ -48,3 +48,6 @@ https://velog.io/@ililil9482/MSA-User-Service-%EB%A7%8C%EB%93%A4%EA%B8%B0-1-%ED%
 
 ### UserService 만들기
 https://velog.io/@ililil9482/UserService-%EB%A7%8C%EB%93%A4%EA%B8%B0
+
+### Security 적용
+https://velog.io/@ililil9482/Security-%EC%A0%81%EC%9A%A9
