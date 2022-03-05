@@ -47,3 +47,5 @@ Microservice Architecture에 대한 학습내용
 * [Order 추가](https://velog.io/@ililil9482/Order-Service)
 
 * [인증과 권한 [1] security 설정](https://velog.io/@ililil9482/%EC%9D%B8%EC%A6%9D%EA%B3%BC-%EA%B6%8C%ED%95%9C-1-security-%EC%84%A4%EC%A0%95)
+
+* [인증과 권한 [2] security 동작 구조](https://velog.io/@ililil9482/%EC%9D%B8%EC%A6%9D%EA%B3%BC-%EA%B6%8C%ED%95%9C-2-security-%EB%8F%99%EC%9E%91-%EA%B5%AC%EC%A1%B0)
