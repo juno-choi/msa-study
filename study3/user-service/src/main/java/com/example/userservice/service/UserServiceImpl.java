@@ -5,6 +5,7 @@ import com.example.userservice.jpa.UserEntity;
 import com.example.userservice.jpa.UserRepository;
 import com.example.userservice.vo.ResponseOrder;
 import com.example.userservice.vo.ResponseUser;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.convention.MatchingStrategies;
@@ -60,5 +61,12 @@ public class UserServiceImpl implements UserService{
         if(userEntity == null) throw new UsernameNotFoundException("user가 존재하지 않습니다.");
 
         return new User(userEntity.getEmail(), userEntity.getEncryptedPwd(), true, true, true, true, new ArrayList<>());
+    }
+
+    @Override
+    public UserDto getUserDetailsByEmail(String userEmail) {
+        UserEntity userEntity = userRepository.findByEmail(userEmail);
+        //if(userEntity == null) throw new UsernameNotFoundException("user email 값이 유효하지 않습니다.");
+        return new ModelMapper().map(userEntity, UserDto.class);
     }
 }
