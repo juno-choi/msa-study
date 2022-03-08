@@ -59,3 +59,4 @@ Microservice Architecture에 대한 학습내용
 ### 📘Spring Config
 
 * [Spring Config [1] Service 적용](https://velog.io/@ililil9482/Spring-Config-1-Service-%EC%A0%81%EC%9A%A9)
+* [Spring Config [2] Gateway적용](https://velog.io/@ililil9482/Spring-Config-2-Gateway%EC%A0%81%EC%9A%A9)
