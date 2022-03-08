@@ -25,6 +25,7 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.csrf().disable();
+        http.authorizeRequests().antMatchers("/actuator/**").permitAll();   //actuator는 모두 허용
         //http.authorizeRequests().antMatchers("/users/**").permitAll();    //기존 모두 ok
         http.authorizeRequests().antMatchers("/**")
             .permitAll()    //ip 설정
