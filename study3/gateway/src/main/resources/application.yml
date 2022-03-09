@@ -11,6 +11,11 @@ eureka: #eureka 세팅은 현재 사용 안함
 spring:
   application:  #gateway service 이름
     name: apigateway-service
+  rabbitmq: #rabbitmq 설정 추가
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
   cloud:
     gateway:  #gateway 설정
       default-filters:
@@ -60,7 +65,7 @@ spring:
         - id: user-service
           uri: lb://USER-SERVICE
           predicates:
-            - Path=/order-service/actuator/**
+            - Path=/user-service/actuator/**
             - Method=GET,POST
           filters:
             - RemoveRequestHeader=Cookie
@@ -74,4 +79,4 @@ management:
   endpoints:
     web:
       exposure:
-        include: refresh, health, beans, httptrace
+        include: refresh, health, beans, httptrace, busrefresh
