@@ -72,8 +72,8 @@ spring:
             - RewritePath=/user-service(?<segment>.*), /$\{segment}
 
 
-token:
-  secret: user_token
+#token:
+#  secret: user_token
 
 management:
   endpoints:

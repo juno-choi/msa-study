@@ -62,3 +62,4 @@ Microservice Architecture에 대한 학습내용
 * [Spring Config [2] Gateway적용](https://velog.io/@ililil9482/Spring-Config-2-Gateway%EC%A0%81%EC%9A%A9)
 * [Spring Config [3] profile과 git](https://velog.io/@ililil9482/Spring-Config-3-profile)
 * [Spring Cloud Bus (RabbitMQ)](https://velog.io/@ililil9482/Spring-Cloud-Bus)
+* [대칭키 비대칭키 암호화](https://velog.io/@ililil9482/Config-%EC%A0%95%EB%B3%B4-%EC%95%94%ED%98%B8%ED%99%94)
