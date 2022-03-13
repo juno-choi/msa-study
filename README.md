@@ -46,6 +46,12 @@ Microservice Architecture에 대한 학습내용
 
 * [Order 추가](https://velog.io/@ililil9482/Order-Service)
 
+---
+
+> study3을 base로 이후 학습내용 진행!
+
+---
+
 ## 📘security, jwt 인증과 권한 설정
 
 * [인증과 권한 [1] security 설정](https://velog.io/@ililil9482/%EC%9D%B8%EC%A6%9D%EA%B3%BC-%EA%B6%8C%ED%95%9C-1-security-%EC%84%A4%EC%A0%95)
@@ -56,6 +62,8 @@ Microservice Architecture에 대한 학습내용
 
 * [인증과 권한 [4] gateway filter 설정](https://velog.io/@ililil9482/%EC%9D%B8%EC%A6%9D%EA%B3%BC-%EA%B6%8C%ED%95%9C-4-gateway-filter-%EC%84%A4%EC%A0%95)
 
+---
+
 ## 📘Spring Config
 
 * [Spring Config [1] Service 적용](https://velog.io/@ililil9482/Spring-Config-1-Service-%EC%A0%81%EC%9A%A9)
@@ -63,3 +71,5 @@ Microservice Architecture에 대한 학습내용
 * [Spring Config [3] profile과 git](https://velog.io/@ililil9482/Spring-Config-3-profile)
 * [Spring Cloud Bus (RabbitMQ)](https://velog.io/@ililil9482/Spring-Cloud-Bus)
 * [대칭키 비대칭키 암호화](https://velog.io/@ililil9482/Config-%EC%A0%95%EB%B3%B4-%EC%95%94%ED%98%B8%ED%99%94)
+
+---
