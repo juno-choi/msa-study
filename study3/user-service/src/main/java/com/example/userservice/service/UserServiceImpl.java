@@ -9,11 +9,16 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.convention.MatchingStrategies;
+import org.springframework.core.ParameterizedTypeReference;
+import org.springframework.core.env.Environment;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,6 +29,9 @@ import java.util.UUID;
 public class UserServiceImpl implements UserService{
     private final UserRepository userRepository;
     private final BCryptPasswordEncoder pwdEncoder;
+    private final RestTemplate restTemplate;
+    private final Environment env;
+    
     @Override
     public ResponseUser createUser(UserDto userDto) {
         userDto.setUserId(UUID.randomUUID().toString());
@@ -44,8 +52,17 @@ public class UserServiceImpl implements UserService{
         UserEntity userEntity = userRepository.findByUserId(userId);
         if(userEntity == null) throw new UsernameNotFoundException("user name not found!");
         UserDto userDto = new ModelMapper().map(userEntity, UserDto.class);
-        List<ResponseOrder> orderList = new ArrayList<>();
+//        List<ResponseOrder> orderList = new ArrayList<>();    //이전에 빈 배열을 반환하던 값
+
+        /* Using as RestTemplate */
+        String orderUrl = String.format(env.getProperty("order_service.url"), userId);
+        ResponseEntity<List<ResponseOrder>> orderListResponse =
+                restTemplate.exchange(orderUrl, HttpMethod.GET, null, new ParameterizedTypeReference<List<ResponseOrder>>() {
+                });
+        List<ResponseOrder> orderList = orderListResponse.getBody();
+
         userDto.setOrders(orderList);
+
         return userDto;
     }
 

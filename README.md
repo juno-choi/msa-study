@@ -73,3 +73,7 @@ Microservice Architecture에 대한 학습내용
 * [대칭키 비대칭키 암호화](https://velog.io/@ililil9482/Config-%EC%A0%95%EB%B3%B4-%EC%95%94%ED%98%B8%ED%99%94)
 
 ---
+
+## 📘Microservice 사이의 통신
+
+* [Microservice 통신 [1] RestTemplate](https://velog.io/@ililil9482/Microservice-%ED%86%B5%EC%8B%A0-1-RestTemplate)
