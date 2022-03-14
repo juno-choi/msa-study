@@ -78,3 +78,6 @@ Microservice Architecture에 대한 학습내용
 
 * [Microservice 통신 [1] RestTemplate](https://velog.io/@ililil9482/Microservice-%ED%86%B5%EC%8B%A0-1-RestTemplate)
 * [Microservice 통신 [2] FeignClient](https://velog.io/@ililil9482/Microservice-%ED%86%B5%EC%8B%A0-2-FeignClient)
+
+## 📘Kafka
+* [Kafka Producer, Consumer](https://velog.io/@ililil9482/Kafka)
