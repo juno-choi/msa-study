@@ -81,3 +81,4 @@ Microservice Architecture에 대한 학습내용
 
 ## 📘Kafka
 * [Kafka Producer, Consumer](https://velog.io/@ililil9482/Kafka)
+* [Kafka Connect (Source, Sink)](https://velog.io/@ililil9482/Kafka-Connect)
