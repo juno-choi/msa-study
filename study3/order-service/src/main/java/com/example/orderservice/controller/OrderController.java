@@ -2,6 +2,7 @@ package com.example.orderservice.controller;
 
 import com.example.orderservice.dto.OrderDto;
 import com.example.orderservice.jpa.OrderEntity;
+import com.example.orderservice.messagequeue.KafkaOrderProducer;
 import com.example.orderservice.messagequeue.KafkaProducer;
 import com.example.orderservice.service.OrderService;
 import com.example.orderservice.vo.RequestOrder;
@@ -16,6 +17,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 @RestController
 @RequestMapping("/order-service")
@@ -24,6 +26,7 @@ public class OrderController {
     private final Environment env;
     private final OrderService orderService;
     private final KafkaProducer kafkaProducer;  //kafka producer 주입
+    private final KafkaOrderProducer kafkaOrderProducer;    //주문 전송 producer 주입
 
     @GetMapping("/health_check")
     public String status(){
@@ -36,13 +39,21 @@ public class OrderController {
         mapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);
 
         //기존의 jpa 로직
+//        OrderDto orderDto = mapper.map(requestOrder, OrderDto.class);
+//        orderDto.setUserId(userId);
+//        OrderDto createOrder = orderService.createOrder(orderDto);
+//        ResponseOrder responseOrder = mapper.map(createOrder, ResponseOrder.class);
         OrderDto orderDto = mapper.map(requestOrder, OrderDto.class);
         orderDto.setUserId(userId);
-        OrderDto createOrder = orderService.createOrder(orderDto);
-        ResponseOrder responseOrder = mapper.map(createOrder, ResponseOrder.class);
+        //kafka 주문 로직 추가
+        orderDto.setOrderId(UUID.randomUUID().toString());
+        orderDto.setTotalPrice(requestOrder.getQty() * requestOrder.getUnitPrice());
 
-        //kafka 로직 추가
+        //kafka 메세지 전송
         kafkaProducer.orderSend("example-catalog-topic", orderDto);
+        kafkaOrderProducer.orderSend("orders", orderDto);
+
+        ResponseOrder responseOrder = mapper.map(orderDto, ResponseOrder.class);
 
         return ResponseEntity.status(HttpStatus.CREATED).body(responseOrder);
     }
