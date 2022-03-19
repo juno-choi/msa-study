@@ -2,6 +2,7 @@ package com.example.orderservice.controller;
 
 import com.example.orderservice.dto.OrderDto;
 import com.example.orderservice.jpa.OrderEntity;
+import com.example.orderservice.messagequeue.KafkaProducer;
 import com.example.orderservice.service.OrderService;
 import com.example.orderservice.vo.RequestOrder;
 import com.example.orderservice.vo.ResponseOrder;
@@ -22,6 +23,7 @@ import java.util.List;
 public class OrderController {
     private final Environment env;
     private final OrderService orderService;
+    private final KafkaProducer kafkaProducer;  //kafka producer 주입
 
     @GetMapping("/health_check")
     public String status(){
@@ -33,10 +35,14 @@ public class OrderController {
         ModelMapper mapper = new ModelMapper();
         mapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);
 
+        //기존의 jpa 로직
         OrderDto orderDto = mapper.map(requestOrder, OrderDto.class);
         orderDto.setUserId(userId);
         OrderDto createOrder = orderService.createOrder(orderDto);
         ResponseOrder responseOrder = mapper.map(createOrder, ResponseOrder.class);
+
+        //kafka 로직 추가
+        kafkaProducer.orderSend("example-catalog-topic", orderDto);
 
         return ResponseEntity.status(HttpStatus.CREATED).body(responseOrder);
     }
