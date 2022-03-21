@@ -84,3 +84,6 @@ Microservice Architecture에 대한 학습내용
 * [Kafka Connect (Source, Sink)](https://velog.io/@ililil9482/Kafka-Connect)
 * [Kafka 활용해보기 [1] Producer, Consumer](https://velog.io/@ililil9482/Kafka-%ED%99%9C%EC%9A%A9%ED%95%B4%EB%B3%B4%EA%B8%B0-1-Producer-Consumer)
 * [Kafka Spring 활용 [2] Connect 사용](https://velog.io/@ililil9482/Kafka-Spring-%ED%99%9C%EC%9A%A9-2-Connect-%EC%82%AC%EC%9A%A9)
+
+## 📘Microservice 관리
+* [MSA 장애 처리와 분산 추척](https://velog.io/@ililil9482/MSA-%EC%9E%A5%EC%95%A0-%EC%B2%98%EB%A6%AC%EC%99%80-%EB%B6%84%EC%82%B0-%EC%B6%94%EC%B2%99)
