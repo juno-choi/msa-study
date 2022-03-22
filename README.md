@@ -87,3 +87,4 @@ Microservice Architecture에 대한 학습내용
 
 ## 📘Microservice 관리
 * [MSA 장애 처리와 분산 추척](https://velog.io/@ililil9482/MSA-%EC%9E%A5%EC%95%A0-%EC%B2%98%EB%A6%AC%EC%99%80-%EB%B6%84%EC%82%B0-%EC%B6%94%EC%B2%99)
+* [MSA 모니터링](https://velog.io/@ililil9482/MSA-%EB%AA%A8%EB%8B%88%ED%84%B0%EB%A7%81)
